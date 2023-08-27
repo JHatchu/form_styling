@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formstyling</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+   
+    <div class="slideshow-container">
+    <div class="myslides fade">
+        <img src="https://i.pinimg.com/236x/e2/ad/b2/e2adb2d4b2e62d46e1380bf51f5a355f.jpg" height="600px" width="300px">
+    </div>
+    <div class="myslides fade ">
+        <img src="https://i.pinimg.com/236x/b7/28/26/b728269e6e336bc986ad98599d12db6e.jpg" height="600px" width="300px">
+    </div>
+    <div class="myslides fade">
+        <img src="https://i.pinimg.com/564x/1f/a8/74/1fa874831e32a6eb34f3c4e3d688ec0f.jpg" height="600px" width="300px">
+    </div>
+<br>
+    <div style="text-align: center;">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+ 
+<div class="form-container">
+
+<img class="lg" src="Screenshot (47).png">
+<form class="form">
+    <div class="name">
+<span class="un">Username:</span><br>
+<input class="txin" type="text">
+</div>
+<div class="pass">
+    <span class="un">Password:</span><br>
+    <input class="txin" type="text">
+    </div>
+    <div class="submit">
+        <button class="sub1">Login</button>
+    </div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+   <script>
+        let slideindex =0 ;
+        caroussel();
+        function caroussel(){
+            let i;
+            let slide = document.getElementsByClassName("myslides");
+            let dot = document.getElementsByClassName("dot")
+            for(i = 0; i < slide.length; i++ ){
+                slide[i].style.display = "none";
+
+            }
+            slideindex++;
+            if(slideindex>slide.length){
+                slideindex = 1
+            }
+            for(i=0; i<dot.length; i++){
+                dot[i].className = dot[i].className.replace(" active"," ");
+            }
+            slide[slideindex-1].style.display = "block";
+            dot[slideindex-1].className += " active";
+            setTimeout(caroussel, 3000);
+
+        }
+    
+    </script>
+</body>
+</html>

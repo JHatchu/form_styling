@@ -1,0 +1,110 @@
+* {box-sizing: border-box;
+ 
+}
+
+
+.myslides{
+display: none;
+position: relative;
+left:50px;
+}
+
+img{
+    vertical-align: middle;
+}
+.slideshow-container{
+position: relative;
+left:0px;
+top:50px;
+background-color: #FFF0F5;
+max-width :1200px;
+height:640px;
+position: relative;
+margin: auto;
+}
+.dot{
+    background-color: black;
+    height: 10px;
+    width:10px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: black  0.6s  ease;
+    position: relative;
+    top:-10px;
+    left:-400px;
+   }
+   .form-container{
+  
+    background-color: #563C5C;
+    width:650px;
+    height:540px;
+    position: relative;
+    top:-588px;
+    left:470px;
+}
+.lg{
+    border-radius: 50%;
+    height: 100px;
+    width:100px;
+    position: relative;
+    left:265px;
+    top:65px;
+}
+.active{
+    background-color:rgb(245, 102, 102);
+}
+.fade{
+    animation-name:fade;
+    animation-duration: 1.5s;
+
+}
+@keyframes fade{
+    from{opacity: .5}
+    to{opacity: 1;}
+}
+.form{
+    position: relative;
+    width:300px;
+    height: 300px;
+    top:100px;
+    left:175px;
+   
+}
+.name{
+    position: relative;
+    left: 15px;
+    top:20px;
+}
+.txin{
+    background-color: #563C5C;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #FFF0F5 ;
+    width:300px;
+    padding-top: 15px;
+}
+.un{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color:  #FFF0F5;
+}
+.pass{
+    position: relative;
+    top:70px;
+    left:20px;
+}
+.submit{
+    position: relative;
+    top:130px;
+    left: 75px;
+}
+.sub1{
+    width: 200px;
+    height: 35px;
+    border: 1px solid #563C5C;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+   background-color: #FFF0F5; ;
+}
